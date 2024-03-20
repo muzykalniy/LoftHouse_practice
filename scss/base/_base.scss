@@ -5,6 +5,17 @@
 
 
 body{
-    font-family: "Raleway", sans-serif;  
+    font-family: "Raleway", sans-serif; 
+    background-color: $dark;
+    color: $white;
+    font-size: 16px; //стандарт шрифта в браузере
 }/*смотрим что он на странице базовый и его указываем в боди */
 
+a{
+    color: $white;
+    transition: color 0.2s ease-in; //применили к свойству color
+    &:hover{
+        color: $accent;
+    } //&символ наследованяи принадлежности
+
+}

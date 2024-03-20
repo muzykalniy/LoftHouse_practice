@@ -100,4 +100,14 @@ font-family: "Playfair Display", serif;
 */
 body {
   font-family: "Raleway", sans-serif;
-} /*смотрим что он на странице базовый и его указываем в боди *//*# sourceMappingURL=main.css.map */
+  background-color: #242B33;
+  color: #fff;
+  font-size: 16px;
+} /*смотрим что он на странице базовый и его указываем в боди */
+a {
+  color: #fff;
+  transition: color 0.2s ease-in;
+}
+a:hover {
+  color: #D4C17F;
+}/*# sourceMappingURL=main.css.map */
