@@ -1,0 +1,14 @@
+/* Подсказка для заведения шрифтов в переменные
+
+font-family: "Roboto", sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Playfair Display", serif;
+
+*/
+
+// Fonts определяем несколько переменных для шрифтов
+
+$font-main: "Raleway", sans-serif; // основной шрифт
+$font-accent: "Playfair Display", serif; //для заголовков
+$font-secondary: "Roboto", sans-serif;
