@@ -1,5 +1,7 @@
 // base важен порядок подключения
+
 @import './base/reset';// сброс стилей
+@import './base/snippets';// сниппеты
 @import './base/vars'; // определили переменные
 @import './base/base';//основные стили для страницы
 
