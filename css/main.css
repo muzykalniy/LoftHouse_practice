@@ -90,6 +90,84 @@ legend {
   display: block;
 }
 
+.snippets {
+  /* bgimg: Background image */
+  background-color: #999;
+  background-image: url("./../");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* bgicon: Background icon */
+  background-image: url("./../");
+  background-position: 20px 10px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  /* abscent: Absolute center position */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* absov: Absolute Overlay */
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(86, 86, 86, 0.5);
+  /* ::absicon Pseudo absolute bg icon */
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  background-image: url("./../");
+  background-repeat: no-repeat;
+  /* wh: Width: 100%, Heigh: 100% */
+  width: 100%;
+  height: 100%;
+  /* trans: Transition */
+  transition: all 0.2s ease-in;
+  /* transl: Transform Translate  */
+  transform: translate(-50%, -50%);
+  /* imp: Import CSS / SCSS */
+}
+
+/* media: CSS, SCSS media */
+/* cssvars: Hint for CSS variables */
+:root {
+  --textColor: #333;
+  --accent: #1050da;
+  --index: calc (1vw+1vh);
+}
+
+body {
+  color: var(--textColor);
+}
+
+/* btn: CSS Button class */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  height: 30px;
+  border-radius: 12px;
+  background: #333333;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #404040;
+}
+
+.button:active {
+  background-color: #222222;
+}
+
 /* Подсказка для заведения шрифтов в переменные
 
 font-family: "Roboto", sans-serif;
@@ -110,4 +188,15 @@ a {
 }
 a:hover {
   color: #D4C17F;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1140px;
+}
+
+.header {
+  min-height: 840px;
+  background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url("/img/header/header-bg.jpeg");
 }/*# sourceMappingURL=main.css.map */

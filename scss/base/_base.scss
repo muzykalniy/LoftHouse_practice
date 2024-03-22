@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Raleway:ital,wght@0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Raleway:ital,wght@0,700;1,700&display=swap");
 
-
-body{
-    font-family: "Raleway", sans-serif; 
+body {
+    font-family: "Raleway", sans-serif;
     background-color: $dark;
     color: $white;
     font-size: 16px; //стандарт шрифта в браузере
-}/*смотрим что он на странице базовый и его указываем в боди */
+} /*смотрим что он на странице базовый и его указываем в боди */
 
-a{
+a {
     color: $white;
     transition: color 0.2s ease-in; //применили к свойству color
-    &:hover{
+    &:hover {
         color: $accent;
     } //&символ наследованяи принадлежности
-
-    
-    
+}
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 1140px; //ширина контейнера 1110пкс но из-за того паддингов по бокам мы добавляем по 15пкс с каждой стороны
 }
