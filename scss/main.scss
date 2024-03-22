@@ -6,4 +6,5 @@
 @import "./base/base"; //основные стили для страницы
 
 // Blocks - подключаем все разделы по одному
-@import "./blocks/header"; //основные стили для страницы
+@import "./blocks/header"; //подключаем хэдер
+@import "./blocks/nav"; // подключаем навигацию

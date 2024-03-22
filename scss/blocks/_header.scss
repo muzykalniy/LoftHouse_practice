@@ -1,4 +1,9 @@
 .header {
+    padding-top: 30px;
+    padding-bottom: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 840px;
     background: linear-gradient(
             180deg,
@@ -7,4 +12,22 @@
             rgb(36, 43, 51) 92.188%
         ),
         url("/img/header/header-bg.jpeg");
+}
+.header__top {
+    position: sticky;
+    top: 0;
+    bottom: 30vh;
+}
+.header__top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    text-align: center;
+    font-size: 48px;
+    font-family: $font-accent;
+    color: $accent;
+    font-weight: 700px;
 }
