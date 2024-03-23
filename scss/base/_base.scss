@@ -5,7 +5,7 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
 body {
     font-family: "Raleway", sans-serif;
     background-color: $dark;
@@ -18,10 +18,24 @@ a {
     transition: color 0.2s ease-in; //применили к свойству color
     &:hover {
         color: $accent;
-    } //&символ наследованяи принадлежности
+    } //&символ наследования принадлежности
 }
 .container {
     margin: 0 auto;
     padding: 0 15px;
     width: 1140px; //ширина контейнера 1110пкс но из-за того паддингов по бокам мы добавляем по 15пкс с каждой стороны
+}
+.visually-hidden {
+    //максимально скрывает элемент
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    position: absolute; //закидываем его в левый угол и выносим из потока
+
+    clip: rect(1px 1px 1px 1px); // убираем его невидимым
+    clip: rect(1px 1px 1px 1px);
+    clip-path: inset(50%);
+
+    white-space: nowrap; // фикс для скринридеров
 }
