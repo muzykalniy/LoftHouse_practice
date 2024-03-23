@@ -13,11 +13,7 @@
         ),
         url("/img/header/header-bg.jpeg");
 }
-.header__top {
-    position: sticky;
-    top: 0;
-    bottom: 30vh;
-}
+
 .header__top-row {
     display: flex;
     justify-content: space-between;
@@ -25,9 +21,17 @@
 }
 
 .header__title {
+    padding-bottom: 121px; //потому что 81пкс+высота мышки 40пкс
+    position: relative;
     text-align: center;
     font-size: 48px;
     font-family: $font-accent;
     color: $accent;
     font-weight: 700px;
+}
+.header__title-icon {
+    position: absolute;
+    left: 50%; // отсчитали 50прц ширины блока .header__title
+    bottom: 0%; // прижали к низу блока
+    transform: translate(-50%, 0%); // двигаем вдоль оси Х так чтобы спозиционировать под текстом ровно и на 0 по У
 }
