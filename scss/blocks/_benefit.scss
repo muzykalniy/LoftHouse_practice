@@ -1,0 +1,19 @@
+.benefits {
+}
+
+.benefits__row {
+    display: flex;
+    column-gap: 70px;
+}
+.benefits__item {
+    text-align: center; //текст и картинка по центру
+}
+.benefits__item-img {
+    margin-bottom: 53px;
+}
+.benefits__item-text {
+    font-size: 20px;
+    line-height: 1.35; // высота шрифта на макете 27, но нам лучше запустить калькулятор и задать множитель 27/20=1.25
+    font-family: $font-secondary;
+    font-weight: 300;
+}
