@@ -197,7 +197,10 @@ a:hover {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 1140px;
+  max-width: 1140px;
+}
+.container--sm {
+  max-width: 824px;
 }
 
 .visually-hidden {
@@ -210,6 +213,17 @@ a:hover {
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
   white-space: nowrap;
+}
+
+.none {
+  display: none !important;
+}
+
+.title-2 {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  color: #d4c17f;
+  font-weight: 700;
 }
 
 .header {
@@ -288,6 +302,10 @@ nav {
   background-image: url("/img/header/phone.svg");
 }
 
+.benefits {
+  padding: 120px 0;
+}
+
 .benefits__row {
   display: flex;
   -moz-column-gap: 70px;
@@ -307,4 +325,8 @@ nav {
   line-height: 1.35;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+
+.appartments__title {
+  margin-bottom: 88px;
 }/*# sourceMappingURL=main.css.map */
