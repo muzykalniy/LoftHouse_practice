@@ -1,0 +1,24 @@
+.cta {
+    padding: 180px 0;
+    background: linear-gradient(180deg, $dark 10.417%, rgba(36, 43, 51, 0) 50.521%, $dark 90.104%),
+        linear-gradient(0deg, #242b33e6, rgba(36, 43, 51, 0.9)), url(/img/call_to_action/cta-bg.jpeg),
+        rgb(196, 196, 196);
+}
+
+.cta__title {
+    margin-bottom: 17px;
+}
+
+.cta__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.cta__text {
+    line-height: 1.5; // 24 line height/16px font size = 1.5
+    p + p {
+        margin-top: 1em;
+    }
+}
+.cta__form {
+}
