@@ -1,0 +1,13 @@
+.apartments {
+}
+
+.apartments__title {
+    margin-bottom: 88px;
+}
+
+.apartments__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); // вместо того, чтобы задать repeat (2, 1fr) мы задаем с прицелом на адаптив: аутофит - автоматически заполнить ряд по длине, минмакс - минимальный размер экрана для адаптива 320пкс-30пкс паддини = 290пкс, 1фрейм если максимальный, то делим пополам
+    gap: 30px;
+}

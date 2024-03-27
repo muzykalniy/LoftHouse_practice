@@ -327,8 +327,14 @@ nav {
   font-weight: 300;
 }
 
-.appartments__title {
+.apartments__title {
   margin-bottom: 88px;
+}
+
+.apartments__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .card {
@@ -367,7 +373,7 @@ nav {
 .card__img {
   position: relative;
   z-index: 5;
-  transition: transform 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .card:hover .card__img {
