@@ -1,8 +1,56 @@
 .card {
+    overflow: hidden; //когда наводим на карточку, изображение не выходило за границы карточки
+    display: inline-block;
+    position: relative;
+    color: $white;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 6; // на 1 индекс больше чем у картинки (5), чтобы фон был поверх картинки
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(180deg, rgba(36, 43, 51, 0), $dark 100%);
+    } // сделали через псевдоэлемент градиент на ссылку
+
+    &::after {
+        opacity: 0; //заранее его выключаем, чтобы включить его ховером
+        content: "";
+        position: absolute;
+        z-index: 7; // на 1 индекс больше чем у фона градиента
+        left: 15px;
+        top: 15px;
+        right: 15px;
+        bottom: 15px;
+        border: 3px double rgba(255, 255, 255, 0.4);
+        transition: opacity 0.2s ease-in; // задаем включение свойства опасити
+    } // сделаем ховер эффект на карточку для появления рамки, блок полностью перекрывает карточку и делает рамку
+    &:hover {
+        color: $white;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    } // включаем опасити ховером
 }
 
 .card__img {
+    position: relative;
+    z-index: 5; // ставим индекс. чтобы поднимать другие слои повыше
+    transition: transform 0.2s ease-in;
 }
 
+.card:hover .card__img {
+    transform: scale(1.1);
+    filter: contrast(110%) brightness(1.2) saturate(1.2); //накидываем контраста, работы с цветом чтобы выделить картинку
+}
+//когда карточка будет в ховере, ее размер будет увеличиваться на 10прц
+
 .card__title {
+    position: absolute;
+    z-index: 9; // это мы задаем, чтобы можно было выбрать текст выделением для того чтобы копировать
+    left: 50px;
+    right: 20px;
+    bottom: 44px;
+    font-size: 24px;
 }
