@@ -477,4 +477,40 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px 30px;
+}
+
+.video {
+  text-align: center;
+}
+
+.video__link {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.video__link::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 43, 51, 0.8);
+  transition: background-color 0.2s ease-in;
+}
+.video__link:hover::before {
+  background: rgba(36, 43, 51, 0.7);
+}
+
+.video__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in;
+}
+
+.video__link:hover .video__icon {
+  transform: translate(-50%, -50%) scale(1.2);
+  filter: saturate(1.5);
 }/*# sourceMappingURL=main.css.map */
