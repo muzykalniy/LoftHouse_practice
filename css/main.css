@@ -440,12 +440,23 @@ nav {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
   font-size: 14px;
+  transition: background-color 0.2s ease-in;
 }
 .form__input::-moz-placeholder {
   color: #bebebe;
 }
 .form__input::placeholder {
   color: #bebebe;
+}
+.form__input:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.form__privacy {
+  font-size: 13px;
+  color: #e7e7e7;
+  text-align: center;
+  line-height: 1.23;
 }
 
 .form__btn {
@@ -455,5 +466,15 @@ nav {
   color: #fff;
   font-weight: 700;
   text-align: center;
-  background: #d4c17f;
+  background-color: #d4c17f;
+  transition: background-color 0.2s ease-in;
+}
+.form__btn:hover {
+  background-color: #ddc676;
+}
+
+.cta__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px 30px;
 }/*# sourceMappingURL=main.css.map */
