@@ -273,6 +273,13 @@ a:hover {
   min-height: 840px;
   background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url("/img/header/header-bg.jpeg");
 }
+@media screen and (max-width: 768px) {
+  .header {
+    min-height: unset;
+    row-gap: 50px;
+  }
+}
+
 .header__top-row {
   display: flex;
   justify-content: space-between;
@@ -303,12 +310,23 @@ a:hover {
   color: #d4c17f;
   font-weight: 700px;
 }
+@media screen and (max-width: 768px) {
+  .header__title {
+    font-size: clamp(1.125rem, -0.7605rem + 6.2718vw, 2.25rem);
+    padding-bottom: 80px;
+  }
+}
 
 .header__title-icon {
   position: absolute;
   left: 50%;
   bottom: 0%;
   transform: translate(-50%, 0%);
+}
+@media screen and (max-width: 768px) {
+  .header__title-icon {
+    max-width: 90px;
+  }
 }
 
 .header__footer {

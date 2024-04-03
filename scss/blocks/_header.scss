@@ -13,7 +13,9 @@
         ),
         url("/img/header/header-bg.jpeg");
 
-    @media screen {
+    @include mediaMobile {
+        min-height: unset;
+        row-gap: 50px;
     }
 }
 
@@ -51,12 +53,24 @@
     font-family: $font-accent;
     color: $accent;
     font-weight: 700px;
+
+    @include mediaMobile {
+        font-size: clamp(
+            1.125rem,
+            -0.7605rem + 6.2718vw,
+            2.25rem
+        ); // взял с сайта https://clamp.font-size.app/   по умолчанию у нас у html размер шрифта 16px  и с него берется rem
+        padding-bottom: 80px;
+    }
 }
 .header__title-icon {
     position: absolute;
     left: 50%; // отсчитали 50прц ширины блока .header__title
     bottom: 0%; // прижали к низу блока
     transform: translate(-50%, 0%); // двигаем вдоль оси Х так чтобы спозиционировать под текстом ровно и на 0 по У
+    @include mediaMobile {
+        max-width: clamp(2px);
+    }
 }
 .header__footer {
     display: grid; // мы смотрим на кол-во колонок в макете в инспекторе
