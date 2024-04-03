@@ -12,12 +12,35 @@
             rgb(36, 43, 51) 92.188%
         ),
         url("/img/header/header-bg.jpeg");
+
+    @media screen {
+    }
 }
 
 .header__top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__nav {
+    // @media screen and (max-width: $laptop) {
+    //     display: none;
+    // } // скрываем кнопку навигации
+
+    @include mediaMobile {
+        display: none;
+    }
+}
+.header__nav-btn {
+    display: none;
+
+    // @media screen and (max-width: $laptop) {
+    //     display: block;
+    // } // показываем кнопку навигации
+    @include mediaMobile {
+        display: block;
+    }
 }
 
 .header__title {
