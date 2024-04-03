@@ -6,8 +6,8 @@
     font-family: $font-accent;
 }
 
-@mixin mediaMobile {
-    @media screen and (max-width: $mobile) {
+@mixin mediaTablet {
+    @media screen and (max-width: $tablet) {
         @content;
     }
 }

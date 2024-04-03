@@ -13,7 +13,7 @@
         ),
         url("/img/header/header-bg.jpeg");
 
-    @include mediaMobile {
+    @include mediaTablet {
         min-height: unset;
         row-gap: 50px;
     }
@@ -24,13 +24,17 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.logo__link {
+    @include mediaTablet {
+        width: clamp(50px, 50%, 178px);
+    }
+}
 .header__nav {
     // @media screen and (max-width: $laptop) {
     //     display: none;
     // } // скрываем кнопку навигации
 
-    @include mediaMobile {
+    @include mediaTablet {
         display: none;
     }
 }
@@ -40,7 +44,7 @@
     // @media screen and (max-width: $laptop) {
     //     display: block;
     // } // показываем кнопку навигации
-    @include mediaMobile {
+    @include mediaTablet {
         display: block;
     }
 }
@@ -54,7 +58,7 @@
     color: $accent;
     font-weight: 700px;
 
-    @include mediaMobile {
+    @include mediaTablet {
         font-size: clamp(
             1.125rem,
             -0.7605rem + 6.2718vw,
@@ -68,8 +72,12 @@
     left: 50%; // отсчитали 50прц ширины блока .header__title
     bottom: 0%; // прижали к низу блока
     transform: translate(-50%, 0%); // двигаем вдоль оси Х так чтобы спозиционировать под текстом ровно и на 0 по У
-    @include mediaMobile {
-        max-width: clamp(2px);
+    @include mediaTablet {
+        width: clamp(
+            24px,
+            5%,
+            40px
+        ); // 15px минимум размер иконки (15/7*100=214пкс это минимальный размер экрана, 35*7/100=500пкс. Все что будет между ними будет 7% от ширины экрана
     }
 }
 .header__footer {
