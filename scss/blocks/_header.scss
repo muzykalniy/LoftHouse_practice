@@ -24,6 +24,23 @@
     justify-content: space-between;
     align-items: center;
 }
+
+//Добавляем модификатор для оверлея
+
+.header__top-row--mobile {
+    position: fixed; //чтобы все перекрывал
+    background-color: $dark;
+    top: 0; //растягиваем на всю ширину
+    left: 0; //растягиваем на всю ширину
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .logo__link {
     @include mediaTablet {
         width: clamp(50px, 50%, 178px);
@@ -64,7 +81,7 @@
             -0.7605rem + 6.2718vw,
             2.25rem
         ); // взял с сайта https://clamp.font-size.app/   по умолчанию у нас у html размер шрифта 16px  и с него берется rem
-        padding-bottom: 80px;
+        padding-bottom: 100px;
     }
 }
 .header__title-icon {
@@ -93,9 +110,4 @@
 }
 .text-right {
     text-align: right;
-}
-.info {
-    @include mediaTablet {
-        font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
-    }
 }
