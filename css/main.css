@@ -340,9 +340,23 @@ a:hover {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .header__footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    row-gap: 30px;
+  }
+}
 
 .text-right {
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .info {
+    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  }
 }
 
 nav {
@@ -357,7 +371,7 @@ nav {
 }
 
 .info {
-  font-size: 18px;
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
   position: relative;
 }
 .info--map, .info--tel {
@@ -367,10 +381,17 @@ nav {
   content: "";
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 50%;
   width: 21px;
   height: 21px;
   background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(0%, -50%);
+}
+@media screen and (max-width: 768px) {
+  .info--map, .info--tel {
+    padding-left: 26px;
+  }
 }
 .info--map::before {
   background-image: url("/img/header/map.svg");

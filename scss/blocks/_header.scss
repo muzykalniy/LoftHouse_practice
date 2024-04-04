@@ -84,7 +84,18 @@
     display: grid; // мы смотрим на кол-во колонок в макете в инспекторе
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @include mediaTablet {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        row-gap: 30px;
+    }
 }
 .text-right {
     text-align: right;
+}
+.info {
+    @include mediaTablet {
+        font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+    }
 }

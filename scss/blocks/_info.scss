@@ -1,5 +1,5 @@
 .info {
-    font-size: 18px;
+    font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
     position: relative;
 
     &--map,
@@ -10,10 +10,16 @@
 
             position: absolute;
             left: 0px;
-            top: 0px;
+            top: 50%;
             width: 21px;
             height: 21px;
             background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(0%, -50%); // по у-ку перемещаем вверх на 50прц от своей высоты
+        }
+
+        @include mediaTablet {
+            padding-left: 26px;
         }
     }
 
