@@ -233,7 +233,7 @@ a:hover {
   max-width: 1140px;
 }
 .container--sm {
-  max-width: 824px;
+  max-width: 840px;
 }
 
 .visually-hidden {
@@ -265,11 +265,11 @@ a:hover {
 }
 
 .header {
-  padding-top: 30px;
-  padding-bottom: 74px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 74px;
   min-height: 840px;
   background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url("/img/header/header-bg.jpeg");
 }
@@ -296,9 +296,20 @@ a:hover {
   z-index: 9;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  row-gap: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
+.header__top-row--mobile .header__nav {
+  display: block;
+}
+.header__top-row--mobile .nav__list {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
 @media screen and (max-width: 768px) {
   .logo__link {
     width: clamp(50px, 50%, 178px);
@@ -438,7 +449,7 @@ nav {
 }
 
 .info {
-  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  font-size: 18px;
   position: relative;
 }
 .info--map, .info--tel {
