@@ -1,5 +1,5 @@
 .info {
-    font-size: 18px;
+    font-size: clamp(0.625rem, 0.4835rem + 0.7073vw, 1.125rem);
     position: relative;
 
     &--map,
