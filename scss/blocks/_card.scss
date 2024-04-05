@@ -25,6 +25,7 @@
         border: 3px double rgba(255, 255, 255, 0.4);
         transition: opacity 0.2s ease-in; // задаем включение свойства опасити
     } // сделаем ховер эффект на карточку для появления рамки, блок полностью перекрывает карточку и делает рамку
+
     &:hover {
         color: $white;
     }
@@ -38,13 +39,15 @@
     position: relative;
     z-index: 5; // ставим индекс. чтобы поднимать другие слои повыше
     transition: all 0.2s ease-in;
+    @include mediaTablet {
+        overflow: hidden; //обрезаем все что переполняет этот блок
+    }
 }
 
 .card:hover .card__img {
     transform: scale(1.1);
     filter: contrast(110%) brightness(1.2) saturate(1.2); //накидываем контраста, работы с цветом чтобы выделить картинку
-}
-//когда карточка будет в ховере, ее размер будет увеличиваться на 10прц
+} //когда карточка будет в ховере, ее размер будет увеличиваться на 10прц
 
 .card__title {
     position: absolute;
@@ -53,4 +56,16 @@
     right: 20px;
     bottom: 44px;
     font-size: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap; //отвечает за то как будут расставляться переносы - оно все будет в одну строку без переноса
+    overflow: hidden; //обрезаем все что переполняет этот блок
+    @include mediaTablet {
+        font-size: clamp(0.875rem, 0.5194rem + 1.7778vw, 1.375rem);
+        left: 20px;
+        right: 70px;
+        bottom: 24px;
+    }
+    @include mediaMobile {
+        left: 20%;
+    }
 }

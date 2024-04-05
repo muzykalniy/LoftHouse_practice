@@ -11,3 +11,9 @@
         @content;
     }
 }
+
+@mixin mediaMobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}

@@ -51,6 +51,9 @@ a {
     font-family: $font-accent;
     color: $accent;
     font-weight: 700;
+    @include mediaTablet {
+        font-size: clamp(1.5rem, 0.9643rem + 2.6786vw, 2.25rem);
+    }
 }
 
 .link-bold {

@@ -258,6 +258,11 @@ a:hover {
   color: #d4c17f;
   font-weight: 700;
 }
+@media screen and (max-width: 768px) {
+  .title-2 {
+    font-size: clamp(1.5rem, 0.9643rem + 2.6786vw, 2.25rem);
+  }
+}
 
 .link-bold {
   color: #d4c17f;
@@ -563,11 +568,28 @@ nav {
 .apartments__title {
   margin-bottom: 88px;
 }
+@media screen and (max-width: 768px) {
+  .apartments__title {
+    margin: 50px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .apartments__title {
+    margin: 50px 0;
+    text-align: center;
+  }
+}
 
 .apartments__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .apartments__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
 }
 
 .card {
@@ -608,6 +630,11 @@ nav {
   z-index: 5;
   transition: all 0.2s ease-in;
 }
+@media screen and (max-width: 768px) {
+  .card__img {
+    overflow: hidden;
+  }
+}
 
 .card:hover .card__img {
   transform: scale(1.1);
@@ -621,6 +648,22 @@ nav {
   right: 20px;
   bottom: 44px;
   font-size: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .card__title {
+    font-size: clamp(0.875rem, 0.5194rem + 1.7778vw, 1.375rem);
+    left: 20px;
+    right: 70px;
+    bottom: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card__title {
+    left: 20%;
+  }
 }
 
 .cta {
