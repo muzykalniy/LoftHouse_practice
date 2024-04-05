@@ -316,7 +316,7 @@ a:hover {
 }
 .header__top-row--mobile .header__nav-btn {
   position: fixed;
-  top: 0px;
+  top: 50px;
   right: 20px;
 }
 
@@ -491,6 +491,7 @@ nav {
 .benefits {
   position: relative;
   padding: 120px 0;
+  overflow: hidden;
 }
 .benefits::after {
   content: "II";
@@ -509,6 +510,13 @@ nav {
   -moz-column-gap: 70px;
        column-gap: 70px;
 }
+@media screen and (max-width: 768px) {
+  .benefits__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 40px 30px;
+  }
+}
 
 .benefits__item {
   text-align: center;
@@ -517,12 +525,24 @@ nav {
 .benefits__item-img {
   margin-bottom: 53px;
 }
+@media screen and (max-width: 768px) {
+  .benefits__item-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+}
 
 .benefits__item-text {
   font-size: 20px;
   line-height: 1.35;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .benefits__item-text {
+    font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
+  }
 }
 
 .apartments {

@@ -1,7 +1,7 @@
 .benefits {
     position: relative;
     padding: 120px 0;
-
+    overflow: hidden;
     &::after {
         content: "II";
         @include decorNumber;
@@ -16,16 +16,33 @@
 .benefits__row {
     display: flex;
     column-gap: 70px;
+    @include mediaTablet {
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(290px, 1fr)
+        ); //мы указываем в репите не кол-во колонок, а auto-fit чтобы колонки максимально заполнили ряд и растянулись. Размеры указываем минимакс 320-15*2 падинги
+        gap: 40px 30px; // между рядами 40пкс, между колонками 30пкс
+    }
 }
 .benefits__item {
     text-align: center; //текст и картинка по центру
 }
 .benefits__item-img {
     margin-bottom: 53px;
+
+    @include mediaTablet {
+        width: 60px; // уменьшаем размер иконок
+        height: 60px;
+        margin-bottom: 20px;
+    }
 }
 .benefits__item-text {
     font-size: 20px;
     line-height: 1.35; // высота шрифта на макете 27, но нам лучше запустить калькулятор и задать множитель 27/20=1.25
     font-family: $font-secondary;
     font-weight: 300;
+    @include mediaTablet {
+        font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
+    }
 }
