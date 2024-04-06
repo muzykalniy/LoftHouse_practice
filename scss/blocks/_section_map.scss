@@ -14,14 +14,18 @@
         transform: translate(+50%, 0%); //пододвигаем вправо на половину ее ширины
         line-height: 0.7;
     } //начинаем позиционировать водяной знак относительно родительского блока, смотрим через сетку в макете
+    @include mediaTablet {
+        padding: 90px 0;
+    }
 }
 
 .section-map__title {
     margin-bottom: 88px;
+    @include mediaTablet {
+        margin-bottom: 44px;
+    }
 }
 
-.section-map__map {
-}
 .map {
     height: 358px;
     background: rgb(98, 98, 98);

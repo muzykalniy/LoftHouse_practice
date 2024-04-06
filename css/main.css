@@ -680,12 +680,22 @@ nav {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media screen and (max-width: 768px) {
+  .cta__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cta__text {
   line-height: 1.5;
 }
 .cta__text p + p {
   margin-top: 1em;
+}
+@media screen and (max-width: 768px) {
+  .cta__text {
+    font-size: clamp(0.875rem, 0.7861rem + 0.4444vw, 1rem);
+  }
 }
 
 .form__input {
@@ -713,6 +723,11 @@ nav {
   text-align: center;
   line-height: 1.23;
 }
+@media screen and (max-width: 768px) {
+  .form__privacy {
+    grid-row: 4/5;
+  }
+}
 
 .form__btn {
   height: 50px;
@@ -727,16 +742,27 @@ nav {
 .form__btn:hover {
   background-color: #ddc676;
 }
+@media screen and (max-width: 768px) {
+  .form__btn {
+    font-size: clamp(0.875rem, 0.7861rem + 0.4444vw, 1rem);
+  }
+}
 
 .cta__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 35px 30px;
 }
+@media screen and (max-width: 768px) {
+  .cta__form {
+    grid-template-columns: 1fr;
+  }
+}
 
 .video {
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 .video::after {
   content: "IV";
@@ -776,6 +802,12 @@ nav {
   transform: translate(-50%, -50%);
   transition: all 0.2s ease-in;
 }
+@media screen and (max-width: 768px) {
+  .video__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 .video__link:hover .video__icon {
   transform: translate(-50%, -50%) scale(1.2);
@@ -799,9 +831,19 @@ nav {
   transform: translate(50%, 0%);
   line-height: 0.7;
 }
+@media screen and (max-width: 768px) {
+  .section-map {
+    padding: 90px 0;
+  }
+}
 
 .section-map__title {
   margin-bottom: 88px;
+}
+@media screen and (max-width: 768px) {
+  .section-map__title {
+    margin-bottom: 44px;
+  }
 }
 
 .map {
@@ -812,16 +854,32 @@ nav {
 .feedback {
   padding-bottom: 180px;
 }
+@media screen and (max-width: 768px) {
+  .feedback {
+    padding-bottom: 90px;
+  }
+}
 
 .feedback__title {
   margin-bottom: 38px;
 }
+@media screen and (max-width: 768px) {
+  .feedback__title {
+    margin-bottom: 19px;
+  }
+}
 
 .feedback__form {
+  margin-top: 37px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .feedback__form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .footer {
@@ -831,11 +889,23 @@ nav {
   font-size: 14px;
   letter-spacing: 0.05rem;
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 25px;
+  }
+}
 
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 40px;
+  }
 }
 
 .footer__logo {

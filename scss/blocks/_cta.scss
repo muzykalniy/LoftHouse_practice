@@ -13,12 +13,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+    }
 }
 .cta__text {
     line-height: 1.5; // 24 line height/16px font size = 1.5
     p + p {
         margin-top: 1em;
+    } //если у нас будет вдруг 2 абзаца, между ними будет отступ равный размеру шрифта
+    @include mediaTablet {
+        font-size: clamp(0.875rem, 0.7861rem + 0.4444vw, 1rem);
     }
-}
-.cta__form {
 }

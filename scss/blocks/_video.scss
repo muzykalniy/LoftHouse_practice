@@ -1,6 +1,7 @@
 .video {
     text-align: center;
     position: relative;
+    overflow: hidden; // скрываем водяной знак чтобы без скрола
     &::after {
         content: "IV";
 
@@ -11,8 +12,6 @@
         line-height: 1.15;
         @include decorNumber;
     } //начинаем позиционировать водяной знак относительно родительского блока, смотрим через сетку в макете
-}
-.visually-hidden {
 }
 
 .video__link {
@@ -39,11 +38,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in;
+    @include mediaTablet {
+        width: 80px;
+        height: 80px;
+    }
 }
 .video__link:hover .video__icon {
     transform: translate(-50%, -50%) scale(1.2); // чтобы иконка не перемещалась вниз нужно еще прописать транслейт, чтобы транслейт не отменялся
     filter: saturate(1.5);
-}
-
-.video__img {
 }
