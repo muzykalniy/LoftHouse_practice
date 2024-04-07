@@ -852,6 +852,7 @@ nav {
 }
 
 .feedback {
+  margin-top: 60px;
   padding-bottom: 180px;
 }
 @media screen and (max-width: 768px) {

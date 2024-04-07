@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoftHouse</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css">
 </head>
 
 <body>
-    <header class="header none">
+    <header class="header none1">
 
         <div class="header__top">
             <div class="container">
@@ -66,7 +67,7 @@
 
 
     <main>
-        <section class="benefits none">
+        <section class="benefits none1">
             <h2 class="visually-hidden">Преимущества ЖК</h2> <!-- добавляем для поисковиков  -->
             <div class="container container--sm">
                 <div class="benefits__row">
@@ -96,7 +97,7 @@
             </div>
         </section>
 
-        <section class="apartments none">
+        <section class="apartments none1">
             <div class="container">
 
                 <div class="apartments__title">
@@ -141,7 +142,7 @@
             </div>
         </section>
 
-        <section class="cta none">
+        <section class="cta none1">
 
             <div class="container">
                 <div class="cta__title">
@@ -158,7 +159,9 @@
 
                     <form action="" class="cta__form form">
                         <input type="text" class="form__input" placeholder="Ваше имя" autocomplete="off">
-                        <input type="text" class="form__input" placeholder="Ваш телефон" autocomplete="off">
+                        <input data-tel-input type="text" class="form__input" placeholder="Ваш телефон"
+                            autocomplete="off">
+                        <!-- можно искать по классу, но так как он одинаковый, то лучше задать дата атрибут для задания маски -->
                         <p class="form__privacy">
                             *Мы никому не передаем ваши данные. <br>
                             И не сохраняем ваш номер в базу.
@@ -172,10 +175,10 @@
             </div>
         </section>
 
-        <section class="video none">
+        <section class="video none1">
             <h2 class="visually-hidden">Видео про ЖК</h2>
             <div class="container">
-                <a href="#!" class="video__link">
+                <a href="https://youtu.be/ahvQ2rkxCoU?si=Hoh4asMyPQk6cIOU" data-youtubeLightbox class="video__link">
                     <img src="./img/video/play.svg" alt="" class="video__icon">
                     <img src="./img/video/video-img.jpeg" alt="" class="video__img">
                 </a>
@@ -193,7 +196,7 @@
             </div>
         </section>
 
-        <section class="feedback none">
+        <section class="feedback none1">
             <div class="container">
                 <div class="feedback__title">
                     <h2 class="title-2">
@@ -267,6 +270,18 @@
         </div>
     </footer>
 
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./libs/phoneMask/mask.js"></script>
+    <script src="./libs/phoneMask//mask_list.js"></script>
+    <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
 
     <script src="./js/main.js"></script>
 </body>
