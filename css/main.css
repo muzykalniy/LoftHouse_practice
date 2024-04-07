@@ -280,7 +280,7 @@ a:hover {
   padding-top: 30px;
   padding-bottom: 74px;
   min-height: 840px;
-  background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url("/img/header/header-bg.jpeg");
+  background: linear-gradient(180deg, rgb(36, 43, 51) 11.979%, rgba(45, 52, 60, 0.38) 51.042%, rgb(36, 43, 51) 92.188%), url("../img/header/header-bg.jpeg");
 }
 @media screen and (max-width: 768px) {
   .header {
@@ -487,10 +487,10 @@ nav {
   }
 }
 .info--map::before {
-  background-image: url("/img/header/map.svg");
+  background-image: url("../img/header/map.svg");
 }
 .info--tel::before {
-  background-image: url("/img/header/phone.svg");
+  background-image: url("../img/header/phone.svg");
 }
 
 .benefits {

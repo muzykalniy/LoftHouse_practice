@@ -24,10 +24,10 @@
     }
 
     &--map::before {
-        background-image: url("/img/header/map.svg");
+        background-image: url("../img/header/map.svg");
     }
 
     &--tel::before {
-        background-image: url("/img/header/phone.svg");
+        background-image: url("../img/header/phone.svg");
     }
 }
